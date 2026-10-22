@@ -1,0 +1,13 @@
+<h2>Lista de Facturas</h2>
+<h2>Facturas de [[${cliente.nombre}]] (Código: [[${cliente.codigo}]] )</h2>
+
+<table>
+  <tr><th>Factura</th><th>Fecha</th><th>Igv</th><th>Ver Detalle</th></tr>
+  <tr th:each="fac : ${facturas}">
+    <td th:text="${fac.numero}"></td>
+    <td th:text="${fac.fecha}"></td>
+    <td th:text="${fac.cigv}"></td>
+    
+    <td><a th:href="@{'/detalle/' + ${fac.numero}}">Ver detalle</a></td>
+  </tr>
+</table>

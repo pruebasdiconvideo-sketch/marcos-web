@@ -1,0 +1,14 @@
+<h2>Detalle de la Factura nro [[${factura}]]</h2>
+<table border="1" width="60%">
+  <tr>
+    <th>Código</th><th>Nombre</th><th>Precio</th><th>Cantidad</th><th>Total</th>
+  </tr>
+  <tr th:each="det : ${detalles}">
+    <td th:text="${det.codigo}"></td>
+    <td th:text="${det.nombre}"></td>
+    <td th:text="${det.precio}"></td>
+    <td th:text="${det.cantidad}"></td>
+    <td th:text="${det.totalParcial}"></td>
+  </tr>
+  <tr><td colspan="4">Total Factura</td><td>[[${total}]]</td></tr>
+</table>

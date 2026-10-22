@@ -1,0 +1,13 @@
+
+
+<h2>Lista de Clientes</h2>
+<table>
+  <tr>
+    <th>Codigo</th><th>Nombre</th><th>Ver Factura</th>
+  </tr>
+  <tr th:each="cli : ${clientes}">
+    <td th:text="${cli.codigo}"></td>
+    <td th:text="${cli.nombre}"></td>
+    <td><a th:href="@{'/facturas/' + ${cli.codigo}}">Ver facturas</a></td>
+  </tr>
+</table>
